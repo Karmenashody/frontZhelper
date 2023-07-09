@@ -1,0 +1,72 @@
+   <div class="bg-img">
+<div class="vh-100 d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card bg-white">
+          <div class="card-body p-5">
+            <form
+              class="mb-3 mt-md-2 "
+              [formGroup]="formdata"
+              (ngSubmit)="submitTheRequest(formdata.value)"
+            >
+               <h2 class="fw-bold mb-2 text-uppercase ">Add Job</h2>
+              <p class="mb-5">Please add your Job !</p>
+              <div class="mb-3" class="form-group my-1">
+                <label class="form-label" >Discription : </label>
+                <input
+                  type="text"
+                  formControlName="discription"
+                  class="form-control"
+                />
+                <!-- <div *ngIf="discription?.invalid && (discription?.dirty || discription?.touched)">
+                  <small class="text-danger" *ngIf="discription?.errors?.['required']">
+                    discription is required
+                  </small>
+                  <small class="text-danger" *ngIf="discription?.errors?.['pattern']">
+                    discription must also contains only capital and small characters
+                  </small>
+                </div> -->
+              </div>
+              <div class="mb-3">
+                <label>Date :</label>
+                <input
+                  type="date"
+                  formControlName="date"
+                  class="form-control"
+                />
+                <!-- <div
+                  *ngIf="
+                    date?.invalid &&
+                    (date?.dirty || date?.touched)
+                  "
+                >
+                  <small
+                    class="text-danger"
+                    *ngIf="date?.errors?.['required']"
+                  >
+                    Date is required
+                  </small>
+                </div>
+              </div>
+
+              <div class="d-grid"></div> -->
+                <div>
+              <input
+                type="submit"
+                [disabled]="formdata.invalid"
+                class="btn btn-primary btn-lg w-100"
+                value="ADD"
+              />
+            </div>
+          </div>
+            </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+

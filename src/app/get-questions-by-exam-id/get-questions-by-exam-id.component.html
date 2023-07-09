@@ -1,0 +1,13 @@
+<div *ngFor="let q of QANS ,let i=index">
+
+<h2>{{q.question}}</h2>
+<div *ngFor="let ans of q.answers">
+
+  <input type="radio" value={{ans.ans}} [name]="q.qId" (click)="ChooseTheAnswer(i,$event)" >
+ 
+  {{ans.ans}}
+
+</div>
+
+</div>
+<button (click)="Submitthedata()">Save the data</button>
